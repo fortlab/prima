@@ -8,7 +8,7 @@ module cobylb_mod
 ! N.B. (Zaikun 20220131): Powell's implementation of COBYLA uses RHO rather than DELTA as the
 ! trust-region radius, and RHO is never increased. DELTA does not exist in Powell's COBYLA code.
 ! Following the idea in Powell's other solvers (UOBYQA, ..., LINCOA), our code uses DELTA as the
-! trust-region radius, while RHO works a lower bound of DELTA and indicates the current resolution
+! trust-region radius, while RHO works as a lower bound of DELTA and indicates the current resolution
 ! of the algorithm. DELTA is updated in a classical way subject to DELTA >= RHO, whereas RHO is
 ! updated as in Powell's COBYLA code and is never increased. The new implementation improves the
 ! performance of COBYLA.
@@ -17,7 +17,7 @@ module cobylb_mod
 !
 ! Started: July 2021
 !
-! Last Modified: Wed 08 Apr 2026 06:38:14 PM CST
+! Last Modified: Wed 09 Sep 2026 11:46:18 PM CST
 !--------------------------------------------------------------------------------------------------!
 
 implicit none
